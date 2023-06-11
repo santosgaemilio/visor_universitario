@@ -1,0 +1,34 @@
+[
+  {
+    "nom": "cu",
+    "north": 25.73576954,
+    "west": -100.3187762,
+    "south": 25.71992959,
+    "east": -100.3040412,
+    "img": "https://storage.googleapis.com/visor_uanl_ortomosaicos_prueba_v1/ciudad_universitaria_uanl/fotogrametria/CU.png"
+  },
+  {
+    "nom": "cs",
+    "north": 25.69548421,
+    "west": -100.3525781,
+    "south": 25.68690508,
+    "east": -100.3454704,
+    "img": "https://storage.googleapis.com/visor_uanl_ortomosaicos_prueba_v1/ciudad_universitaria_uanl/fotogrametria/CS.png"
+  },
+  {
+    "nom": "cm",
+    "north": 25.61668985,
+    "west": -100.2936213,
+    "south": 25.60654903,
+    "east": -100.273382,
+    "img": "https://storage.googleapis.com/visor_uanl_ortomosaicos_prueba_v1/ciudad_universitaria_uanl/fotogrametria/CM.png"
+  },
+  {
+    "nom": "ca",
+    "north": 25.78633007,
+    "west": -100.2875703,
+    "south": 25.78264231,
+    "east": -100.2835904,
+    "img": "https://storage.googleapis.com/visor_uanl_ortomosaicos_prueba_v1/ciudad_universitaria_uanl/fotogrametria/CA.png"
+  }
+]

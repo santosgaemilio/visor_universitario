@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+         Visor Universitario
+    </title>
+    <!-- BOOTSTRAP CSS -->
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+    crossorigin="anonymous">
+    <!-- LEAFLET -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+        <!-- Este script debe ir aqui si no no sirve -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <!-- -------------------------------------- -->
+
+    <!-- FONT AWESOME -->
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/84ca25f97e.js" crossorigin="anonymous"></script>
+    <!-- CONTROL SLIDEMENU -->
+    <link rel="stylesheet" href="./src/L.Control.SlideMenu.css">
+    <script src="./src/L.ControlSlideMenu.js"></script>
+    <!-- BEAUTIFUL MARKERS -->
+    <link rel="stylesheet" href="./src/leaflet-beautify-marker-icon.css">
+    <script src="./src/leaflet-beautify-marker-icon.js"></script>
+
+        
+    <!-- ------ -->
+    <link rel="stylesheet" href="./css/map_pos.css">
+</head>
+<body>
+    
+        <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+        <div id="map"></div>
+        <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <!-- POPUP TEST -->
+        <div id="popup">
+            <img src="./imgs/1.PNG" alt="" id = "img_pop" class="img-fluid">
+        </div>
+
+        <div id="popup-r">
+            <img src="./imgs/banner.png" alt="" id = "img_r" class="img-fluid">
+        </div>
+            
+            
+        
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+    crossorigin="anonymous"></script>
+    
+    <script src="./js/map_base.js"></script>
+    <script src="./js/map_campus.js"></script>
+    <script src="./js/map_img.js"></script>
+    
+  
+        
+</body>
+</html>

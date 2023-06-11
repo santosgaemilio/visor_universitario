@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- LEAFLET -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  
+      <!-- Este script debe ir aqui si no no sirve -->
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
+      <!-- -------------------------------------- -->
+  <style>
+    #map {
+      height: 400px;
+    }
+
+    #popup {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 200px;
+      height: 100px;
+      background-color: white;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="popup">
+    <h2>Marker Popup</h2>
+    <p>Content goes here</p>
+  </div>
+
+  
+  <script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+    }).addTo(map);
+
+    var marker = L.marker([51.505, -0.09]).addTo(map);
+
+    marker.on('click', function () {
+      var popup = document.getElementById('popup');
+      if (popup.style.display === 'none') {
+        popup.style.display = 'block';
+      } else {
+        popup.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
