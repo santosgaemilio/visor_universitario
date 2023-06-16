@@ -12,8 +12,8 @@ let bounds = L.latLngBounds(center);
 
 let style = {
   color: 'blue',
-  fillColor: '#ffffff',
-  fillOpacity: 0.2,
+  fillColor: 'blue',
+  fillOpacity: 0.4,
   weight: 2
 }
 
@@ -64,6 +64,7 @@ function toggleCM(){
 let cu_button = document.querySelector("#cu")
 cu_button.addEventListener('click', toggleCU)
 
+// Test para ver que nuestro API funciona
 fetch('./assets/cu2.geojson')
   .then(function (response) {
     return response.json();
@@ -284,11 +285,11 @@ ortobotones[3].addEventListener('click', toggleCCA_O)
 function highlightFeature(layer, properties) {
     layer.setStyle({
         weight: 5,
-        color: '#820746',
+        color: 'blue',
         dashArray: '',
         fillOpacity: 0.7
     });
-
+    info.show();
     info.update(properties);
 }
 
@@ -296,6 +297,7 @@ function highlightFeature(layer, properties) {
 function resetHighlight(layer, style) {
   layer.setStyle(style)
   info.update();
+  info.hide();
 }
 
 // click
@@ -316,7 +318,7 @@ info.onAdd = function (map) {
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
     this._div.innerHTML = '<h4>Información</h4>' +  (props ?
-        `<b>Campus</b> ${props.campus} <br>
+        `<b>Campus</b> <span style="text-align: right;">${props.campus}</span> <br>
         <b>Propietario</b> ${props.propietario} <br>
         <b>No. Expediente</b> ${props.expediente_num} <br>
         <b>Superficie</b> ${props.superficie_m2} m<sup>2</sup> <br>
@@ -327,6 +329,16 @@ info.update = function (props) {
         <b>Valor Catastral</b> ${props.valor_catastro_terreno} <br>
     `
         : 'Coloca el mouse sobre un campus');
+};
+
+// Funciones para que se esconda esta madre: 
+
+info.show = function () {
+  this._div.style.display = 'inline';
+};
+
+info.hide = function () {
+  this._div.style.display = 'none';
 };
 
 info.addTo(map);

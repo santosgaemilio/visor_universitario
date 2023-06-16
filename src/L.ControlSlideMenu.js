@@ -8,15 +8,17 @@ L.Control.SlideMenu = L.Control.extend({
         changeperc: '10',
         delay: '10',
         icon: 'fa-solid fa-bars',
+        paddingTop: '10%',
         hidden: false,
         icon_close: {
-            class_up: 'fa fa-chevron-up',
+            class_up: 'fa fa-xmark',
             class_down: 'fa fa-chevron-down',
             class_left: 'fa fa-chevron-left',
             class_right: 'fa fa-chevron-right',
             size: '12pt',
             color: '#333333'
-        }
+        },
+        
     },
 
     initialize: function(innerHTML, options){
